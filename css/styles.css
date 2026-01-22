@@ -1451,7 +1451,7 @@ ul {
         transform: none;  /* Quitamos el movimiento */
         text-align: center;
         width: 100%;
-        font-size: 16px; /* Un poco más pequeño para celular */
+        font-size: 14px; /* Un poco más pequeño para celular */
         margin-bottom: 5px;
     }
 
@@ -1597,7 +1597,7 @@ ul {
     
     /* BOTÓN */
     .btn-compra {
-        font-size: 12px;
+        font-size: 14px;
         padding: 8px 15px;
         margin-top: 10px;
     }
@@ -1607,7 +1607,7 @@ ul {
     }
 
     .titulo-categorias {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 30px;
     text-align: center;
     }
@@ -1629,7 +1629,7 @@ ul {
     }
 
     .categoria-item figcaption {
-    font-size: 15px;
+    font-size: 14px;
     margin-top: 14px;
     }
     
@@ -1648,7 +1648,7 @@ ul {
 }
 
 .titulo-conocenos {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .texto-conocenos p {
@@ -1657,7 +1657,7 @@ ul {
 }
 
 .btn-vermas {
-    font-size: 15px;
+    font-size: 14px;
     padding: 10px 24px;
 }
 
@@ -1668,7 +1668,7 @@ ul {
     }
 
 .productos-destacados .titulo {
-        font-size: 24px;
+        font-size: 22px;
         margin-bottom: 20px;
         padding: 0 15px;
     }
@@ -1707,7 +1707,7 @@ ul {
     /* Quitamos el ancho fijo grande y dejamos que compartan el espacio */
     min-width: auto; 
     width: 50%;         /* Mitad y mitad */
-    font-size: 15px;    /* Letra legible */
+    font-size: 14px;    /* Letra legible */
     padding: 10px 0;    /* Botones más "táctiles" */
   }
 
@@ -1727,13 +1727,13 @@ ul {
 }
 
 .beneficios h2 {
-    font-size: 17px;
+    font-size: 16px;
     margin-top: 12px;
 }
 
 .beneficios p {
-    font-size: 15px;
-    line-height: 1.4;
+    font-size: 14px;
+    line-height: 1.2;
 }
 
 /* ===== FOOTER ===== */
@@ -1821,7 +1821,7 @@ ul {
     border: 1px solid #000000; /* Borde negro fino como la imagen */
     color: #000000;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     
     /* Centrado */
     display: flex;
@@ -1852,12 +1852,11 @@ ul {
   .producto .btn-carrito img {
     width: 20px;
     height: 20px;
-    filter: brightness(0) invert(1); /* Vuelve el icono BLANCO */
   }
 
   /* 5. AJUSTES DEL TÍTULO */
   .producto .nombre {
-    font-size: 15px; /* Letra un poco más pequeña para que quepa */
+    font-size: 14px; /* Letra un poco más pequeña para que quepa */
     margin-top: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1904,7 +1903,7 @@ ul {
     }
 
     .qs-contenido h2 {
-        font-size: 24px; /* Título más pequeño */
+        font-size: 22px; /* Título más pequeño */
         margin-bottom: 15px;
     }
 
@@ -1925,7 +1924,7 @@ ul {
     }
 
     .mision-vision h3 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .icono-mv {
@@ -1939,7 +1938,7 @@ ul {
     }
 
     .valores h3 {
-        font-size: 24px;
+        font-size: 22px;
         margin-bottom: 30px;
     }
 
@@ -1964,7 +1963,7 @@ ul {
     }
     
     .valor-item span {
-        font-size: 16px;
+        font-size: 14px;
     }
 
 /* ===== SECCIÓN TALLAS  ===== */  
@@ -1982,7 +1981,7 @@ ul {
 
     /* Ajuste de textos */
     .intro {
-        font-size: 16px;
+        font-size: 14px;
         text-align: justify; /* Opcional: para que se vea ordenado */
     }
 
@@ -2023,13 +2022,13 @@ ul {
     /* Ajuste de fuente en tabla */
     .tabla-tallas th, 
     .tabla-tallas td {
-        font-size: 16px;
+        font-size: 14px;
         padding: 8px; /* Celdas más compactas */
     }
 
     /* 5. LISTA DE MEDIDAS */
     .subtitulo, .titulo-tabla {
-        font-size: 24px; /* Títulos más pequeños */
+        font-size: 22px; /* Títulos más pequeños */
         margin-top: 30px;
         margin-bottom: 20px;
     }
