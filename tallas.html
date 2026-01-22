@@ -50,7 +50,6 @@
     <nav class="iconos-utilidades">
       <ul>
         <li><img src="ICONOS/buscador.png" alt="Buscar"></li>
-        <li><img src="ICONOS/cuenta.png" alt="Cuenta"></li>
         <li><img src="ICONOS/corazon.png" alt="Favoritos"></li>
         <li><img src="ICONOS/bolsa_compra.png" alt="Carrito"></li>
       </ul>
@@ -175,3 +174,177 @@
   </div>
 
 </section>
+
+<!-- 9. SECCIÓN BENEFICIOS -->
+   <section class="beneficios">
+      
+    <section>
+      <img src="ICONOS/delivery.png" alt="Delivery">
+      <h2>DELIVERY</h2>
+      <p>Envíos a cualquier parte del Perú 100% seguros</p>
+    </section>
+
+    <section>
+      <img src="ICONOS/calidad.png" alt="Calidad">
+      <h2>CALIDAD</h2>
+      <p>Ofrecemos la mejor calidad en todos nuestros productos</p>
+    </section>
+
+    <section>
+      <img src="ICONOS/pago seguro.png" alt="Pago Seguro">
+      <h2>PAGO SEGURO</h2>
+      <p>Paga con cualquier medio de pago con seguridad garantizada</p>
+    </section>
+
+    <section>
+      <img src="ICONOS/marca.corazón.png" alt="Marca">
+      <h2>MARCA PIURANA</h2>
+      <p>Diseños de catálogo exclusivos</p>
+    </section>
+  
+   </section>
+
+<!-- 10. FOOTER -->
+   <footer class="footer">
+
+    <section class="footer-column logo-redes-column"> 
+        <img src="IMG/Logo_suteki_peque.png" class="logo-footer"alt="Suteki Logo">
+
+      <ul class="redes-list">
+        <li><a href="https://www.tiktok.com/@suteki.peru.20"target="_blank"><img src="ICONOS/iconos_tik tok_rosa.png" alt="TikTok"></a></li>
+        <li><a href="https://www.facebook.com/Suteki.boutique/"target="_blank"><img src="ICONOS/iconos_facebook_rosa.png" alt="Facebook"></a></li>
+        <li><a href="https://www.instagram.com/suteki.peru/"target="_blank"><img src="ICONOS/iconos_instagram_rosa.png" alt="Instagram"></a></li>
+      </ul>
+    </section>
+
+    <section class="footer-column">
+      <h4>CATEGORÍAS</h4>
+      <a href="vestidos.html"">Vestidos</a>
+      <a href="superiores.html">Prendas Superiores</a>
+      <a href="inferiores.html">Prendas Inferiores</a>
+      <a href="abrigos.html">Abrigos / Casacas</a>
+      <a href="faldas.html">Faldas / Shorts</a>
+    </section>
+
+    <section class="footer-column">
+      <h4>SERVICIO AL CLIENTE</h4>
+      <a href="index.html">Inicio</a>
+      <a href="vestidos.html">Prendas</a>
+      <a href="tallas.html">Guía de Tallas</a>
+      <a href="nosotras.html">Nosotras</a>
+    </section>
+
+    <section class="footer-column">
+      <h4>¿NECESITAS MÁS INFORMACIÓN?</h4>
+      <p>📞 Teléfono: 975337314</p>
+      <p>📍 Residencial Monteverde Mz. P lote 10<br>
+      Castilla - Piura</p>
+    </section>
+
+   </footer>
+
+<!-- 11. COPYRIGHT  -->
+    <section class="copyright">
+      <p>© 2025 Suteki Perú. Todos los derechos reservados.</p>
+    </section>
+
+<!-- BOTÓN WHATSAPP -->
+<div class="whatsapp-widget">
+
+  <div class="whatsapp-header">
+    <div class="titulo">
+      <img src="ICONOS/whatsapp.svg" alt="WhatsApp">
+      <span>WhatsApp</span>
+    </div>
+    <button class="cerrar-whatsapp">✕</button>
+  </div>
+
+  <div class="whatsapp-body">
+    <div class="mensaje-chat">
+      Hola 😊 <br>
+      ¿necesitas ayuda con tu compra?
+    </div>
+
+    <a href="https://wa.me/51975337214" target="_blank" class="abrir-chat">
+      Abrir chat
+      <img src="ICONOS/avion.svg" alt="">
+    </a>
+  </div>
+
+</div>
+
+<!-- BOTÓN FLOTANTE -->
+<div class="whatsapp-fab">
+  <img src="ICONOS/whatsapp.svg" alt="WhatsApp">
+</div>
+
+    <!-- BOTÓN PARA SUBIR-->
+    <button id="btn-subir" aria-label="Subir al inicio">
+      ↑
+    </button>
+
+<!-- ================= JS ================= -->
+<script>
+function toggleMenu() {
+  document.getElementById("menu-principal").classList.toggle("activo");
+}
+</script>
+
+<script>
+  const btnSubir = document.getElementById("btn-subir");
+
+  window.addEventListener("scroll", () => {
+    btnSubir.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  btnSubir.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script> 
+
+<script>
+const grid = document.querySelector('.grid-productos');
+const puntos = document.querySelectorAll('.punto');
+let index = 0;
+
+puntos.forEach((punto, i) => {
+  punto.addEventListener('click', () => {
+    index = i;
+    grid.style.transform = `translateX(-${index * 100}%)`;
+
+    puntos.forEach(p => p.classList.remove('activo'));
+    punto.classList.add('activo');
+  });
+});
+</script>
+
+<script>
+const widget = document.querySelector(".whatsapp-widget");
+const boton = document.querySelector(".whatsapp-fab");
+const cerrar = document.querySelector(".cerrar-whatsapp");
+
+/* ABIERTO AL CARGAR */
+window.addEventListener("load", () => {
+  widget.style.display = "block";
+  boton.classList.add("oculto");
+});
+
+/* HOVER → SE TRANSFORMA EN WIDGET */
+boton.addEventListener("mouseenter", () => {
+  widget.style.display = "block";
+  boton.classList.add("oculto");
+});
+
+/* CERRAR */
+cerrar.addEventListener("click", () => {
+  widget.style.display = "none";
+  boton.classList.remove("oculto");
+});
+</script>
+
+
+</body>
+</html>

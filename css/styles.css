@@ -684,7 +684,7 @@ ul {
   color: white;
   font-weight: 400;
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
   padding: 10px;
 } 
 
@@ -877,7 +877,6 @@ ul {
   gap: 20px;
   align-items: center;
   justify-content: center;      /* CENTRADAS */
-  overflow: visible;            /* ❌ SIN DESLIZADOR */
 }
 
 /* BOTÓN CATEGORÍA */
@@ -1082,7 +1081,7 @@ ul {
 /* SUBTÍTULO */
 .hero-subtitle {
   font-size: 18px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-bottom: 20px;
 }
 
@@ -1584,7 +1583,6 @@ ul {
         padding: 0 2px;
     }
 
-
     /* VISTE / ACTITUD */
     .text-line {
         font-size: clamp(30px, 7vw, 130px);
@@ -1605,11 +1603,11 @@ ul {
     }
 /* ===== CATEGORÍAS ===== */
     .categorias {
-    padding: 35px 6%;
+    padding: 5px 6%;
     }
 
     .titulo-categorias {
-    font-size: 26px;
+    font-size: 24px;
     margin-bottom: 30px;
     text-align: center;
     }
@@ -1621,12 +1619,12 @@ ul {
     }
 
     .categoria-box {
-    padding: 40px 12px;
+    padding: 10px 10px;
     border-radius: 22px;
     }
 
     .categoria-box img {
-    width: 150px;
+    width: 140px;
     height: auto;
     }
 
@@ -1659,29 +1657,29 @@ ul {
 }
 
 .btn-vermas {
-    font-size: 16px;
+    font-size: 15px;
     padding: 10px 24px;
 }
 
 /* ===== PRODUCTOS DESTACADOS ===== */
 .productos-destacados {
-        padding: 20px 0;
+        padding: 40px 0;
         margin: 20px auto;
     }
 
 .productos-destacados .titulo {
-        font-size: 26px;
-        margin-bottom: 30px;
+        font-size: 24px;
+        margin-bottom: 20px;
         padding: 0 15px;
     }
 /* 1. ACTIVAMOS EL SCROLL DESLIZANTE */
   .grid-productos {
-    gap: 0px;                  /* Pegaditos */
-    overflow-x: auto;          /* Habilitar deslizar con dedo */
-    scroll-snap-type: x mandatory; /* Efecto imán */
-    scroll-behavior: smooth;
+    display: flex;
+    gap: 10px;                 /* Pequeña separación entre productos */
+    overflow-x: auto;          /* Scroll deslizable */
+    scroll-snap-type: x mandatory; 
+    padding: 0 10px;           /* Margen a los costados de la pantalla */
     
-    /* Ocultamos barra scroll móvil */
     -webkit-overflow-scrolling: touch; 
     scrollbar-width: none;
   }
@@ -1689,7 +1687,7 @@ ul {
 
   /* 2. PRODUCTO: UNO POR UNO (100% ANCHO) */
   .producto {
-    min-width: 100%;           /* Ocupa toda la pantalla */
+    min-width: calc(50% - 5px);          /* Ocupa toda la pantalla */
     scroll-snap-align: center; /* Se centra solo al soltar */
     scroll-snap-stop: always;  /* Obliga a parar en cada foto */
     padding: 0 15px;           /* Margen lateral para que no pegue al borde */
@@ -1709,13 +1707,12 @@ ul {
     /* Quitamos el ancho fijo grande y dejamos que compartan el espacio */
     min-width: auto; 
     width: 50%;         /* Mitad y mitad */
-    font-size: 16px;    /* Letra legible */
+    font-size: 15px;    /* Letra legible */
     padding: 10px 0;    /* Botones más "táctiles" */
   }
 
   /* Ocultamos las flechas negras en móvil porque se usa el dedo */
   .flecha-nav { display: none; }
-}
 
 /* ===== BENEFICIOS ===== */
 .beneficios {
@@ -1788,21 +1785,290 @@ ul {
 /* ===== BOTONES FLOTANTES ===== */
 
 .whatsapp-fab {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
 }
 
 #btn-subir {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     bottom: 80px;
-    font-size: 18px;
-}
+    font-size: 25px;
 }
 
-/* =====================================================
-   =====  AJUSTE TABLET / PANTALLA MEDIANA =====
-   ===================================================== */
+/* ===== SECCIÓN PRENDAS ===== */
+.products-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+    gap: 30px 10px; /* Espacio entre productos */
+    padding: 0 10px; /* Margen a los costados de la pantalla */
+  }
+
+  /* 2. CONTENEDOR DE ACCIONES (Precio + Botón) */
+  .producto .acciones {
+    display: flex;
+    justify-content: space-between; /* Uno a cada extremo */
+    align-items: stretch; /* Estira para que tengan la misma altura */
+    gap: 10px; /* Espacio entre el precio y el botón */
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  /* 3. ESTILO DEL PRECIO (Caja Blanca) */
+  .producto .precio {
+    flex: 1; /* Ocupa el 50% del espacio */
+    background-color: #ffffff;
+    border: 1px solid #000000; /* Borde negro fino como la imagen */
+    color: #000000;
+    font-weight: 600;
+    font-size: 15px;
+    
+    /* Centrado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 6px; /* Bordes redondeados */
+    padding: 8px 0; /* Altura del botón */
+    min-width: 0; /* Evita que se deforme */
+  }
+
+  /* 4. ESTILO DEL BOTÓN CARRITO (Caja Rosada) */
+  .producto .btn-carrito {
+    flex: 1; /* Ocupa el otro 50% del espacio */
+    background-color: #efa098; /* Rosado de tu marca */
+    border: none;
+    border-radius: 6px;
+    
+    /* Centrado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    width: auto; /* Reseteamos anchos fijos */
+  }
+
+  /* Icono blanco de la bolsa */
+  .producto .btn-carrito img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* Vuelve el icono BLANCO */
+  }
+
+  /* 5. AJUSTES DEL TÍTULO */
+  .producto .nombre {
+    font-size: 15px; /* Letra un poco más pequeña para que quepa */
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+/* ===== SECCIÓN NOSOTRAS  ===== */ 
+
+    /* 1. BANNER SUPERIOR */
+    .banner-sub {
+        margin-top: 0; /* Ajuste si la cabecera molesta */
+         z-index: 100;
+  
+    }
+    
+    .texto-banner-sub {
+        padding: 15px; /* Menos relleno para evitar desbordes */
+    }
+
+    .hero-subtitle {
+        font-size: 10px; /* Texto más pequeño */
+        margin-bottom: 10px;
+    }
+
+    .texto-banner-sub h2 {
+        font-size: 24px; /* Título adaptado */
+    }
+
+    /* 2. QUIENES SOMOS (De Fila a Columna) */
+    .quienes-somos {
+        padding: 20px 5%; /* Márgenes laterales */
+        margin: 30px auto;
+    }
+
+    .qs-contenido {
+        flex-direction: column-reverse; /* Imagen arriba, texto abajo (o normal 'column') */
+        padding: 30px 20px;
+        gap: 30px;
+        text-align: center; /* Texto centrado se ve mejor en móvil */
+    }
+
+    /* Ajuste de Imagen */
+    .imagen-quienes {
+        width: 100%;
+    }
+
+    .qs-contenido h2 {
+        font-size: 24px; /* Título más pequeño */
+        margin-bottom: 15px;
+    }
+
+    .qs-contenido p {
+        font-size: 16px; /* Texto legible */
+    }
+
+    /* 3. MISIÓN / VISIÓN (De Fila a Columna) */
+    .mision-vision {
+        flex-direction: column; /* Tarjetas una debajo de la otra */
+        padding: 0 5%;
+        gap: 25px;
+        margin: 40px auto;
+    }
+
+    .mision-vision .bloque {
+        padding: 30px 20px;
+    }
+
+    .mision-vision h3 {
+        font-size: 22px;
+    }
+
+    .icono-mv {
+        width: 100px; /* Iconos un poco más pequeños */
+    }
+
+    /* 4. VALORES (Grid de 4 a Grid de 2 o 1) */
+    .valores {
+        padding: 0 5%;
+        margin: 40px auto;
+    }
+
+    .valores h3 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .lista-valores {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en vez de 4 */
+        gap: 20px;
+    }
+    
+    /* Si la pantalla es MUY pequeña (menos de 400px), poner en 1 columna */
+    @media (max-width: 400px) {
+        .lista-valores {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .valor-item {
+        padding: 20px 15px;
+    }
+
+    .icono-valor {
+        width: 60px; /* Ajuste de icono */
+    }
+    
+    .valor-item span {
+        font-size: 16px;
+    }
+
+/* ===== SECCIÓN TALLAS  ===== */  
+.guia-tallas {
+        margin: 20px auto; /* Menos margen vertical */
+        padding: 0 5%;     /* Margen lateral de seguridad */
+    }
+
+    /* 2. LAYOUT (De lado a lado -> Uno abajo del otro) */
+    .guia-contenido {
+        flex-direction: column-reverse; /* Imagen arriba (referencia), tabla abajo */
+        gap: 30px;
+        align-items: center; /* Centrar todo */
+    }
+
+    /* Ajuste de textos */
+    .intro {
+        font-size: 16px;
+        text-align: justify; /* Opcional: para que se vea ordenado */
+    }
+
+    /* 3. IMAGEN (Centrada y ajustada) */
+    .guia-imagen {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .guia-imagen img {
+        max-width: 80%; /* Que no sea gigante en el celular */
+        height: auto;
+    }
+
+    /* 4. TABLA RESPONSIVE (Scroll Horizontal) */
+    /* Esto es vital para que la tabla no rompa el diseño */
+    .tabla-tallas {
+        display: block;       /* Necesario para el scroll */
+        width: 100%;
+        overflow-x: auto;     /* Activa el deslizamiento lateral */
+        white-space: nowrap;  /* Evita que el texto de la celda se parta */
+        
+        /* Estilo de la barra de scroll (solo estética) */
+        scrollbar-width: thin;
+        scrollbar-color: #efa098 #fff3ef;
+    }
+    
+    /* Barra scroll en Chrome/Safari */
+    .tabla-tallas::-webkit-scrollbar {
+        height: 6px;
+    }
+    .tabla-tallas::-webkit-scrollbar-thumb {
+        background-color: #efa098;
+        border-radius: 10px;
+    }
+
+    /* Ajuste de fuente en tabla */
+    .tabla-tallas th, 
+    .tabla-tallas td {
+        font-size: 16px;
+        padding: 8px; /* Celdas más compactas */
+    }
+
+    /* 5. LISTA DE MEDIDAS */
+    .subtitulo, .titulo-tabla {
+        font-size: 24px; /* Títulos más pequeños */
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .medidas li {
+        padding: 15px;
+        font-size: 15px;
+        flex-direction: row; /* Mantiene icono al lado del texto */
+        align-items: flex-start;
+    }
+
+    .medidas span {
+        flex-shrink: 0; /* Evita que el circulo del número se aplaste */
+        width: 28px;    /* Un poco más chicos */
+        height: 28px;
+        font-size: 15px;
+    }
+
+    /* 6. CAJA DE RECOMENDACIONES */
+    .bloque-ayuda {
+        padding: 0 5%;
+    }
+
+    .card-recomendaciones {
+        padding: 30px 25px; /* Menos relleno interno */
+    }
+
+    .card-recomendaciones h3 {
+        font-size: 22px;
+    }
+
+    .card-recomendaciones li {
+        font-size: 15px;
+        padding-left: 15px; /* Menos sangría */
+    }
+
+}
+
+
 /* =====================================================
    =====  AJUSTE TABLET / PANTALLA MEDIANA =====
    ===================================================== */
