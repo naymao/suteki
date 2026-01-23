@@ -403,6 +403,30 @@
 </script>
 
 <script>
+const widget = document.querySelector(".whatsapp-widget");
+const boton = document.querySelector(".whatsapp-fab");
+const cerrar = document.querySelector(".cerrar-whatsapp");
+
+/* ABIERTO AL CARGAR */
+window.addEventListener("load", () => {
+  widget.style.display = "block";
+  boton.classList.add("oculto");
+});
+
+/* HOVER → SE TRANSFORMA EN WIDGET */
+boton.addEventListener("mouseenter", () => {
+  widget.style.display = "block";
+  boton.classList.add("oculto");
+});
+
+/* CERRAR */
+cerrar.addEventListener("click", () => {
+  widget.style.display = "none";
+  boton.classList.remove("oculto");
+});
+</script>
+
+<script>
   const btnSubir = document.getElementById("btn-subir");
 
   window.addEventListener("scroll", () => {
